@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>มีข้อความถึงคุณ 💗</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center;
+    padding: 24px; font-family: system-ui, sans-serif;
+    background: linear-gradient(145deg, #ffe4ef, #fff7fb 55%, #ffd6e7);
+    color: #75465b;
+  }
+  .card {
+    width: min(100%, 430px); text-align: center; padding: 34px 25px;
+    background: rgba(255,255,255,.86); border: 1px solid #ffd0e1;
+    border-radius: 28px; box-shadow: 0 18px 55px rgba(190,90,130,.15);
+  }
+  .heart { font-size: 42px; animation: pulse 1.7s infinite; }
+  h1 { color: #d65a91; font-size: 27px; margin: 10px 0; }
+  .sub { color: #a8798f; margin: 8px 0 25px; }
+  button {
+    border: 0; border-radius: 999px; padding: 14px 25px;
+    background: #e77eaa; color: white; font-size: 16px; font-weight: 700;
+    cursor: pointer; box-shadow: 0 7px 18px rgba(214,90,145,.25);
+  }
+  button:hover { background: #d96598; }
+  #message { display: none; margin-top: 26px; line-height: 1.9; animation: appear .7s ease; }
+  #message h2 { color: #d65a91; font-size: 21px; }
+  .sign { color: #d65a91; font-weight: 700; margin-top: 20px; }
+  .tiny { color: #c18ba3; font-size: 13px; margin-top: 24px; }
+  @keyframes pulse { 50% { transform: scale(1.12); } }
+  @keyframes appear { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="heart">💗</div>
+    <h1>มีข้อความถึงคุณ</h1>
+    <p class="sub">มีบางอย่างอยากบอก…</p>
+    <button id="openBtn" onclick="openMessage()">กดเปิดอ่านข้อความ ♡</button>
+    <section id="message" aria-live="polite">
+      <h2>ถึงคนเก่งของเรา 🌷</h2>
+      <p>ไม่ว่าวันนี้จะเหนื่อยแค่ไหน หรือเจอเรื่องอะไรมา อยากให้รู้ไว้นะว่ายังมีคนหนึ่งที่คอยเป็นห่วงและส่งกำลังใจให้เสมอ</p>
+      <p>ไม่จำเป็นต้องเข้มแข็งตลอดเวลาก็ได้ เหนื่อยก็พักบ้าง ค่อย ๆ ก้าวไปทีละก้าว ไม่ต้องรีบ ทุกอย่างจะค่อย ๆ ดีขึ้นนะ</p>
+      <p>ขอให้พรุ่งนี้เป็นวันที่ใจดีกับเธอมากกว่าวันนี้ และอย่าลืมดูแลตัวเองด้วยนะ 😊</p>
+      <p class="sign">เป็นกำลังใจให้อยู่ตรงนี้เสมอนะ 💗</p>
+    </section>
+    <p class="tiny">ส่งรอยยิ้มเล็ก ๆ ให้คุณในวันนี้ ♡</p>
+  </main>
+<script>
+function openMessage() {
+  document.getElementById('message').style.display = 'block';
+  document.getElementById('openBtn').style.display = 'none';
+}
+</script>
+</body>
+</html>
